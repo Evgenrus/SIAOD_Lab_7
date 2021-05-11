@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/dev/SIAOD/Lab7/Graph.cpp
+sstream
+-
+Graph.h
+D:/dev/SIAOD/Lab7/Graph.h
+
+D:/dev/SIAOD/Lab7/Graph.h
+iostream
+D:/dev/SIAOD/Lab7/iostream
+list
+D:/dev/SIAOD/Lab7/list
+fstream
+D:/dev/SIAOD/Lab7/fstream
+string
+D:/dev/SIAOD/Lab7/string
+stack
+D:/dev/SIAOD/Lab7/stack
+
