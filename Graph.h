@@ -18,7 +18,6 @@ namespace SIAOD {
     private:
         list<int> *m_data;
         unsigned  m_size;
-        list<int> :: iterator it;
     public:
         Graph(unsigned size = 0, list<int> *data = nullptr);
 
@@ -28,7 +27,7 @@ namespace SIAOD {
 
         Graph& readFile(string fileName);
 
-        stack<int>& eilerCycle();
+        stack<int> eilerCycle();
 
         void removeFromList(int k, int find);
     };

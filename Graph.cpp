@@ -29,20 +29,23 @@ namespace SIAOD {
 
         if(!file.is_open())
             throw "Couldn't open file";
-        file >> m_size;
+        getline(file, temp);
+        stringstream iss(temp);
+        iss >> m_size;
 
         for(int i = 0; i < m_size; i++) {
             getline(file, temp);
-            istringstream iss(temp);
+            stringstream iss(temp);
             while(!iss.eof()) {
                 iss >> dot;
                 m_data[i].push_back(dot);
                 cout << dot << " pushed on list " << i << endl;
             }
         }
+        return *this;
     }
 
-    stack<int> &Graph::eilerCycle() {
+    stack<int> Graph::eilerCycle() {
         stack<int> cycle1;
         stack<int> cycle2;
         int current = 0;
@@ -53,7 +56,6 @@ namespace SIAOD {
             if(!m_data[current].empty()) {
                 int temp = m_data[current].front();
                 cycle1.push(temp);
-
                 this->removeFromList(current, temp);
                 this->removeFromList(temp, current);
             } else {
@@ -62,17 +64,18 @@ namespace SIAOD {
                 cycle2.push(current);
             }
         }
-
         return cycle2;
     }
 
     void Graph::removeFromList(int k, int find) {
+        list<int> :: iterator it;
         it = m_data[k].begin();
-        while(*it != find || it != m_data[k].end()) {
-            it++;
+        for(auto iter = m_data[k].begin(); iter != m_data[k].end(); iter++){
+            if(*iter == find && iter != m_data[k].end()) {
+                iter = m_data[k].erase(iter);
+                break;
+            }
         }
-        if(*it == find)
-            m_data[k].erase(it);
     }
 
 }
