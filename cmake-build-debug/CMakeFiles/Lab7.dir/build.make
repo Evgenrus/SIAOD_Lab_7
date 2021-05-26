@@ -61,10 +61,10 @@ RM = C:\Users\EVGEN\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7142.21\
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\dev\SIAOD\Lab7
+CMAKE_SOURCE_DIR = D:\dev\SIAOD\Lab8
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\dev\SIAOD\Lab7\cmake-build-debug
+CMAKE_BINARY_DIR = D:\dev\SIAOD\Lab8\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab7.dir/depend.make
@@ -77,29 +77,29 @@ include CMakeFiles/Lab7.dir/flags.make
 
 CMakeFiles/Lab7.dir/main.cpp.obj: CMakeFiles/Lab7.dir/flags.make
 CMakeFiles/Lab7.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\SIAOD\Lab7\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab7.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab7.dir\main.cpp.obj -c D:\dev\SIAOD\Lab7\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\SIAOD\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab7.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab7.dir\main.cpp.obj -c D:\dev\SIAOD\Lab8\main.cpp
 
 CMakeFiles/Lab7.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab7.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\SIAOD\Lab7\main.cpp > CMakeFiles\Lab7.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\SIAOD\Lab8\main.cpp > CMakeFiles\Lab7.dir\main.cpp.i
 
 CMakeFiles/Lab7.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab7.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\SIAOD\Lab7\main.cpp -o CMakeFiles\Lab7.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\SIAOD\Lab8\main.cpp -o CMakeFiles\Lab7.dir\main.cpp.s
 
 CMakeFiles/Lab7.dir/Graph.cpp.obj: CMakeFiles/Lab7.dir/flags.make
 CMakeFiles/Lab7.dir/Graph.cpp.obj: ../Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\SIAOD\Lab7\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab7.dir/Graph.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab7.dir\Graph.cpp.obj -c D:\dev\SIAOD\Lab7\Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\SIAOD\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab7.dir/Graph.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab7.dir\Graph.cpp.obj -c D:\dev\SIAOD\Lab8\Graph.cpp
 
 CMakeFiles/Lab7.dir/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab7.dir/Graph.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\SIAOD\Lab7\Graph.cpp > CMakeFiles\Lab7.dir\Graph.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\SIAOD\Lab8\Graph.cpp > CMakeFiles\Lab7.dir\Graph.cpp.i
 
 CMakeFiles/Lab7.dir/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab7.dir/Graph.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\SIAOD\Lab7\Graph.cpp -o CMakeFiles\Lab7.dir\Graph.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\SIAOD\Lab8\Graph.cpp -o CMakeFiles\Lab7.dir\Graph.cpp.s
 
 # Object files for target Lab7
 Lab7_OBJECTS = \
@@ -115,7 +115,7 @@ Lab7.exe: CMakeFiles/Lab7.dir/build.make
 Lab7.exe: CMakeFiles/Lab7.dir/linklibs.rsp
 Lab7.exe: CMakeFiles/Lab7.dir/objects1.rsp
 Lab7.exe: CMakeFiles/Lab7.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\dev\SIAOD\Lab7\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Lab7.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\dev\SIAOD\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Lab7.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lab7.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/Lab7.dir/clean:
 .PHONY : CMakeFiles/Lab7.dir/clean
 
 CMakeFiles/Lab7.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\dev\SIAOD\Lab7 D:\dev\SIAOD\Lab7 D:\dev\SIAOD\Lab7\cmake-build-debug D:\dev\SIAOD\Lab7\cmake-build-debug D:\dev\SIAOD\Lab7\cmake-build-debug\CMakeFiles\Lab7.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\dev\SIAOD\Lab8 D:\dev\SIAOD\Lab8 D:\dev\SIAOD\Lab8\cmake-build-debug D:\dev\SIAOD\Lab8\cmake-build-debug D:\dev\SIAOD\Lab8\cmake-build-debug\CMakeFiles\Lab7.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Lab7.dir/depend
 

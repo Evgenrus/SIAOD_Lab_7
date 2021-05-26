@@ -8,13 +8,13 @@ int main() {
     Graph A(7);
     A.readFile("test.txt");
 
-    stack<int> c;
+    //stack<int> c;
+    A.show();
+    cout << endl << endl;
+    //c = A.eilerCycle();
+    Graph c = A.Kruskal();
 
-    c = A.eilerCycle();
+    c.show();
 
-    while(!c.empty()) {
-        cout << c.top() << "; ";
-        c.pop();
-    }
     return 0;
 }

@@ -3,17 +3,19 @@
 //
 
 #include <sstream>
+#include <algorithm>
 #include "Graph.h"
 
 namespace SIAOD {
-    Graph::Graph(unsigned int size, list<int> *data) : m_size(size) {
-        m_data = new list<int>[size];
+
+    Graph::Graph(unsigned int size, list<Node> *data) : m_size(size) {
+        m_data = new list<Node>[size];
         if(data != nullptr)
             std::copy(data, data + size, m_data);
     }
 
-    Graph::Graph(Graph &A) : m_size(A.m_size) {
-        m_data = new list<int>[m_size];
+    Graph::Graph(const Graph &A) : m_size(A.m_size) {
+        m_data = new list<Node>[m_size];
         for(int i = 0; i < m_size; i++)
             m_data[i] = A.m_data[i];
     }
@@ -22,7 +24,7 @@ namespace SIAOD {
         delete[] m_data;
     }
 
-    Graph &Graph::readFile(string fileName) {
+    Graph &Graph::readFile(const string& fileName) {
         ifstream file(fileName);
         string temp;
         int dot;
@@ -38,7 +40,9 @@ namespace SIAOD {
             stringstream iss(temp);
             while(!iss.eof()) {
                 iss >> dot;
-                m_data[i].push_back(dot);
+                //iss >> rang;
+                Node tem = {dot, i + dot};
+                m_data[i].push_back(tem);
                 cout << dot << " pushed on list " << i << endl;
             }
         }
@@ -48,13 +52,13 @@ namespace SIAOD {
     stack<int> Graph::eilerCycle() {
         stack<int> cycle1;
         stack<int> cycle2;
-        int current = 0;
-        cycle1.push(m_data[0].front());
+        int current;
+        cycle1.push(m_data[0].front().node);
 
         while(!cycle1.empty()) {
             current = cycle1.top();
             if(!m_data[current].empty()) {
-                int temp = m_data[current].front();
+                int temp = m_data[current].front().node;
                 cycle1.push(temp);
                 this->removeFromList(current, temp);
                 this->removeFromList(temp, current);
@@ -67,14 +71,82 @@ namespace SIAOD {
         return cycle2;
     }
 
+    Graph Graph::Kruskal(){
+        Graph T(7);
+        auto LE = sort();
+
+        int origin = LE.front().origin;
+        int dest = LE.front().dest;
+        int range = LE.front().range;
+        Node temp {dest, range};
+        T.m_data[origin].push_back(temp);
+        cout << "pushed " << origin << " - " << dest << endl;
+        T.marked.push_back(origin);
+        //T.marked.push_back(dest);
+        LE.pop_front();
+
+        while(!LE.empty()) {
+            ostTree temper = LE.front();
+            LE.pop_front();
+            if(T.isMarked(temper.dest) == T.isMarked(temper.origin)) {
+                T.m_data[temper.origin].push_back(Node {temper.dest, temp.range});
+                T.marked.push_back(temper.origin);
+                cout << "pushed " << temper.origin << " - " << temper.dest << endl;
+            }
+        }
+
+        return T;
+    }
+
     void Graph::removeFromList(int k, int find) {
-        list<int> :: iterator it;
-        it = m_data[k].begin();
         for(auto iter = m_data[k].begin(); iter != m_data[k].end(); iter++){
-            if(*iter == find && iter != m_data[k].end()) {
+            if(iter->node == find && iter != m_data[k].end()) {
                 iter = m_data[k].erase(iter);
                 break;
             }
+        }
+    }
+
+    bool Graph::treeCmp(ostTree a, ostTree b) {
+        return a.range < b.range;
+    }
+
+    list<ostTree> Graph::sort() {
+        list<ostTree> LE;
+        for(int i = 0; i < m_size; i++) {
+            auto iter = m_data[i].begin();
+            while(iter != m_data[i].end()) {
+                ostTree temp = ostTree {i, iter->node, iter->range};
+                LE.push_back(temp);
+                iter++;
+            }
+        }
+
+        LE.sort();
+
+        return LE;
+    }
+
+    bool Graph::isMarked(int ref) {
+        bool res = false;
+        if(!marked.empty()) {
+            auto temp = std::find(marked.begin(), marked.end(), ref);
+            if(temp != marked.end())
+                res = true;
+            cout << ref << " == " << *temp << endl;
+        }
+        return res;
+    }
+
+    void Graph::show() {
+        for(int i = 0; i < m_size; i++) {
+            auto iter = m_data[i].begin();
+            cout << i << " : ";
+            while(iter != m_data[i].end()) {
+                cout << iter->node << "; ";
+                iter++;
+            }
+            cout << endl;
         }
     }
 

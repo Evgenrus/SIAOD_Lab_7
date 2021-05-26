@@ -6,21 +6,23 @@
 
 #IncludeRegexTransform: 
 
-D:/dev/SIAOD/Lab7/Graph.cpp
+D:/dev/SIAOD/Lab8/Graph.cpp
 sstream
 -
+algorithm
+-
 Graph.h
-D:/dev/SIAOD/Lab7/Graph.h
+D:/dev/SIAOD/Lab8/Graph.h
 
-D:/dev/SIAOD/Lab7/Graph.h
+D:/dev/SIAOD/Lab8/Graph.h
 iostream
-D:/dev/SIAOD/Lab7/iostream
+D:/dev/SIAOD/Lab8/iostream
 list
-D:/dev/SIAOD/Lab7/list
+D:/dev/SIAOD/Lab8/list
 fstream
-D:/dev/SIAOD/Lab7/fstream
+D:/dev/SIAOD/Lab8/fstream
 string
-D:/dev/SIAOD/Lab7/string
+D:/dev/SIAOD/Lab8/string
 stack
-D:/dev/SIAOD/Lab7/stack
+D:/dev/SIAOD/Lab8/stack
 
